@@ -1,10 +1,12 @@
 <script setup>
 import { computed } from 'vue'
+import MyIconFood from './MyIconFood.vue'
 
 const props = defineProps({
   href: String,
   size: String,
-  variant: String
+  variant: String,
+  icon: Boolean
 })
 
 // Je garde ce commentaire car je le juge utile
@@ -17,8 +19,10 @@ const className = computed(() => ({
 }))
 </script>
 <template>
-  <a v-if="href" :href="href" class="button" :class="className"><slot></slot></a>
-  <button v-else class="button" :class="className"><slot></slot></button>
+  <a v-if="href" :href="href" class="button" :class="className"><slot></slot> </a>
+  <button v-else class="button" :class="className">
+    <slot></slot> <MyIconFood v-if="icon" name="ChevronRight" size="small" background="white" />
+  </button>
 </template>
 
 <style lang="scss" scoped>
@@ -28,7 +32,10 @@ const className = computed(() => ({
   border: none;
   border-radius: rem(15);
   box-shadow: 0px rem(4) rem(4) rgba(0, 0, 0, 0.25);
-  display: inline-block;
+  display: inline-flex;
+  gap: rem(20);
+  align-items: center;
+  justify-content: center;
   color: $white;
   font-family: $primary-font-family;
   font-size: $regular-font-size;

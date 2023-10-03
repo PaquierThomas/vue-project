@@ -3,7 +3,7 @@ import { computed } from 'vue'
 
 import ArrowLeft from '../icons/ArrowLeft.vue'
 import ArrowRight from '../icons/ArrowRight.vue'
-import ChevronLeft from '../icons/ChevronLeft.vue'
+import ChevronRight from '../icons/ChevronRight.vue'
 import ShoppingBag from '../icons/ShoppingBag.vue'
 import Play from '../icons/Play.vue'
 import IconTooling from '../icons/IconTooling.vue'
@@ -19,6 +19,7 @@ import Instagram from '../icons/Instagram.vue'
 import Linkedin from '../icons/Linkedin.vue'
 import Twitter from '../icons/Twitter.vue'
 import Truck from '../icons/Truck.vue'
+import StarFilled from '../icons/StarFilled.vue'
 
 const props = defineProps({
   background: String,
@@ -42,14 +43,16 @@ const getIcon = computed(() => {
       return ArrowLeft
     case 'right-arrow':
       return ArrowRight
-    case 'chevron-left':
-      return ChevronLeft
+    case 'ChevronRight':
+      return ChevronRight
     case 'shopping-bag':
       return ShoppingBag
     case 'play':
       return Play
     case 'search':
       return Search
+    case 'StarFilled':
+      return StarFilled
     case 'map-pin':
       return MapPin
     case 'clock':

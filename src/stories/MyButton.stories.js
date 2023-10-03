@@ -14,6 +14,10 @@ export default {
     variant: {
       control: 'select',
       options: ['default', 'rounded']
+    },
+    Boolean: {
+      control: 'boolean',
+      default: 'false'
     }
   }
 }
@@ -32,7 +36,8 @@ export const PrimaryButton = {
   },
   args: {
     size: 'regular',
-    variant: 'default'
+    variant: 'default',
+    icon: false
   }
 }
 
@@ -50,7 +55,8 @@ export const SecondaryButton = {
   },
   args: {
     size: 'regular',
-    variant: 'rounded'
+    variant: 'rounded',
+    icon: false
   }
 }
 
@@ -68,7 +74,8 @@ export const SmallPrimaryButton = {
   },
   args: {
     size: 'regular',
-    variant: 'rounded'
+    variant: 'rounded',
+    icon: true
   }
 }
 
@@ -81,11 +88,12 @@ export const SmallSecondaryButton = {
       setup() {
         return { args }
       },
-      template: `<MyButton v-bind="args">Add to cart</MyButton>`
+      template: `<MyButton v-bind="args">Add to cart </MyButton>`
     }
   },
   args: {
     size: 'small',
-    variant: 'rounded'
+    variant: 'rounded',
+    icon: false
   }
 }
