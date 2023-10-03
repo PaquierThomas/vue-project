@@ -1,7 +1,7 @@
 import MyButton from '@/components/elements/MyButton.vue'
 
 export default {
-  title: 'Elements/MyButton',
+  title: 'elements/MyButton',
   component: MyButton,
   argTypes: {
     href: {
@@ -27,7 +27,7 @@ export const PrimaryButton = {
       setup() {
         return { args }
       },
-      template: `<MyButton v-bind="args">My link Button</MyButton>`
+      template: `<MyButton v-bind="args">Order now</MyButton>`
     }
   },
   args: {
@@ -45,7 +45,7 @@ export const SecondaryButton = {
       setup() {
         return { args }
       },
-      template: `<MyButton v-bind="args">My link Button</MyButton>`
+      template: `<MyButton v-bind="args">Learn Button</MyButton>`
     }
   },
   args: {
@@ -63,12 +63,12 @@ export const SmallPrimaryButton = {
       setup() {
         return { args }
       },
-      template: `<MyButton v-bind="args">My link Button</MyButton>`
+      template: `<MyButton v-bind="args">See more product</MyButton>`
     }
   },
   args: {
-    size: 'small',
-    variant: 'default'
+    size: 'regular',
+    variant: 'rounded'
   }
 }
 
@@ -81,7 +81,7 @@ export const SmallSecondaryButton = {
       setup() {
         return { args }
       },
-      template: `<MyButton v-bind="args">My link Button</MyButton>`
+      template: `<MyButton v-bind="args">Add to cart</MyButton>`
     }
   },
   args: {

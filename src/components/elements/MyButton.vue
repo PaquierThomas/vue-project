@@ -7,6 +7,7 @@ const props = defineProps({
   variant: String
 })
 
+// Je garde ce commentaire car je le juge utile
 /* J'ai corrigé cette partie après le cours avec une gestion des classes beaucoup plus simple. 
 J'avais oublié qu'on pouvait mettre des objets dans le className */
 

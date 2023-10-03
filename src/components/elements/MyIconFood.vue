@@ -22,13 +22,18 @@ import Truck from '../icons/Truck.vue'
 
 const props = defineProps({
   background: String,
-  name: String
+  name: String,
+  size: String
 })
 
 const className = computed(() => ({
   ' -orange': props.background === 'orange',
+  ' -tangerine': props.background === 'tangerine',
   ' -black': props.background === 'black',
-  ' -no-bg': props.background === 'no-bg'
+  ' -no-bg': props.background === 'no-bg',
+  ' -small': props.size === 'small',
+  ' -medium': props.size === 'medium',
+  ' -large': props.size === 'large'
 }))
 
 const getIcon = computed(() => {
@@ -91,10 +96,21 @@ const getIcon = computed(() => {
   width: rem(50);
   align-items: center;
   justify-content: center;
+  svg {
+    width: 60%;
+  }
 
   &.-orange {
     background: $primary-color;
     color: $white;
+    svg {
+      fill: $white;
+    }
+  }
+  &.-tangerine {
+    background: $secondary-color;
+    color: $primary-color;
+    box-shadow: none;
   }
 
   &.-black {
@@ -105,8 +121,17 @@ const getIcon = computed(() => {
     background: none;
     box-shadow: none;
   }
-  // &.-small {
-  //   padding: rem(14) rem(29);
-  // }
+  &.-small {
+    height: rem(50);
+    width: rem(50);
+  }
+  &.-medium {
+    height: rem(88);
+    width: rem(88);
+  }
+  &.-large {
+    height: rem(98);
+    width: rem(98);
+  }
 }
 </style>

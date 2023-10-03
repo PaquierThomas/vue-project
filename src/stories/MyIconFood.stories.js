@@ -29,7 +29,11 @@ export default {
     },
     background: {
       control: 'select',
-      options: ['orange', 'black', 'white', 'no-bg']
+      options: ['orange', 'tangerine', 'black', 'white', 'no-bg']
+    },
+    size: {
+      control: 'select',
+      options: ['small', 'medium', 'large']
     }
   }
 }
