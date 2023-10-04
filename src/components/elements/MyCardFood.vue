@@ -7,6 +7,8 @@ const props = defineProps({
   imageSrc: String,
   title: String,
   description: String,
+  rating: String,
+  price: String,
   buttonLabel: String
 })
 </script>
@@ -17,17 +19,28 @@ const props = defineProps({
     </div>
 
     <div class="card__content">
-      <MyIconFood name="fork-knife" size="large" background="tangerine" />
-      <h2 size="small">{{ title }}</h2>
-      <p>{{ description }}</p>
-      <!-- <div class="card__button">
-        <MyButton variant="rounded" size="small">{{ buttonLabel }}</MyButton>
-      </div> -->
+      <div class="card__firstline">
+        <h2 size="small">{{ title }}</h2>
+        <div class="card__rating">
+          <MyIconFood name="StarFilled" size="small" background="no-bg" />
+          <h3>{{ rating }}</h3>
+        </div>
+      </div>
+      <div class="card__secondline">
+        <MyButton class="card__button" variant="rounded" size="small">{{ buttonLabel }}</MyButton>
+        <h3>${{ price }}</h3>
+      </div>
     </div>
   </div>
 </template>
 <style lang="scss">
 .card {
+  // 35px pour la bordure
+  // 70% pour l'image
+  // max-width: 500px;
+  // min-width: 450px;
+  // aspect-ratio: 1/1;
+
   padding: rem(50) rem(10);
   max-width: rem(350);
   border-radius: rem(20);

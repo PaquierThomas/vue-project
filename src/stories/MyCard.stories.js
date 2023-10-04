@@ -35,10 +35,10 @@ export const Card = {
     }
   },
   args: {
-    description: 'Description de la card',
-    title: 'Titre de la card',
-    imageSrc: 'http://placekitten.com/300/150',
-    imageAlt: 'Image de chat',
+    title: 'Healthy Food',
+    description: `But I must explain to you 
+    how all this mistaken idea of denouncing pleasure and
+    practising pain was wrong.`,
     buttonLabel: 'Bouton de la card'
   }
 }
