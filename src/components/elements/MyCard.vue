@@ -18,7 +18,7 @@ const props = defineProps({
 
     <div class="card__content">
       <MyIconFood name="fork-knife" size="large" background="tangerine" />
-      <h2 size="small">{{ title }}</h2>
+      <h2 size="small">{{ title }} {{ title }}</h2>
       <p>{{ description }}</p>
       <!-- <div class="card__button">
         <MyButton variant="rounded" size="small">{{ buttonLabel }}</MyButton>
